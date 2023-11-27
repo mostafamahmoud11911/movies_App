@@ -29,7 +29,7 @@ async function getMovies(type) {
   loader.classList.remove("d-none");
   loader.classList.add("d-flex");
   let response = await fetch(
-    `https://api.themoviedb.org/3/movie/${type}?api_key=74052a12ed43d666ebfc2e802b1f07e2&language=en-US&page=1`
+    `https://api.themoviedb.org/3/movie/${type}?api_key=f3ea600c6c90e26c27c2437692851c1e&language=en-US&page=1`
   );
   let data = await response.json();
   moviesContainer = data.results;
@@ -46,7 +46,7 @@ async function getTrending() {
   loader.classList.remove("d-none");
   loader.classList.add("d-flex");
   let response = await fetch(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=74052a12ed43d666ebfc2e802b1f07e2`
+    `https://api.themoviedb.org/3/trending/all/day?api_key=f3ea600c6c90e26c27c2437692851c1e`
   );
   let data = await response.json();
   moviesContainer = data.results;
@@ -75,7 +75,7 @@ async function searchData() {
   loader.classList.add("d-flex");
   if (value.length > 0) {
     let response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=74052a12ed43d666ebfc2e802b1f07e2&language=en-US&query=${value}&page=1&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=f3ea600c6c90e26c27c2437692851c1e&language=en-US&query=${value}&page=1&include_adult=false`
     );
     let data = await response.json();
     moviesContainer = data.results;
