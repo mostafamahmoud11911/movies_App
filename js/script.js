@@ -258,10 +258,11 @@ userAge.addEventListener("keyup", validationAge);
 // Side Bar
 
 let sideBarWidth = $(".sideBar-container").innerWidth();
+console.log(sideBarWidth)
 
 $("#btn").on("click", function () {
   if ($("#sideBar").css("left") === "0px") {
-    $("#sideBar").animate({ left: -sideBarWidth }, 500);
+    $("#sideBar").animate({ left: sideBarWidth === 262.141 ? -sideBarWidth :  262.141}, 500);
     $("#btn").addClass("fa-bars");
     $("#btn").removeClass("fa-circle-xmark");
     for (let i = 0; i < 5; i++) {
